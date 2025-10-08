@@ -1,55 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Premium Concrete Products</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet">
   <style>
     :root {
-      --concrete-50: #fafafa;
-      --concrete-100: #f4f4f5;
-      --concrete-200: #e4e4e7;
-      --concrete-300: #d4d4d8;
-      --concrete-400: #a1a1aa;
-      --concrete-500: #71717a;
-      --concrete-600: #52525b;
-      --concrete-700: #3f3f46;
-      --concrete-800: #27272a;
-      --concrete-900: #18181b;
-      
-      --accent-light: #f59e0b;
-      --accent: #d97706;
-      --accent-dark: #b45309;
-      
+      /* Updated color palette to match Homa Bay Market Insights logo */
+      --primary-blue: #1a365d;
+      --primary-dark-blue: #153e75;
+      --primary-light-blue: #2d5a9a;
+      --accent-orange: #ed8936;
+      --accent-dark-orange: #dd6b20;
+      --accent-light-orange: #f6ad55;
+
+      /* Neutral tones */
+      --concrete-50: #f8fafc;
+      --concrete-100: #f1f5f9;
+      --concrete-200: #e2e8f0;
+      --concrete-300: #cbd5e1;
+      --concrete-400: #94a3b8;
+      --concrete-500: #64748b;
+      --concrete-600: #475569;
+      --concrete-700: #334155;
+      --concrete-800: #1e293b;
+      --concrete-900: #0f172a;
+
+      /* Assigning new accent colors */
+      --accent-light: var(--accent-orange);
+      --accent: var(--accent-dark-orange);
+      --accent-dark: #c05621;
+
       --font-heading: 'Montserrat', sans-serif;
       --font-body: 'Roboto', sans-serif;
-      
+
+      /* Spacing, radius, and shadow variables remain the same */
       --space-xs: 0.5rem;
       --space-sm: 1rem;
       --space-md: 1.5rem;
       --space-lg: 2rem;
       --space-xl: 3rem;
       --space-2xl: 4rem;
-      
+
       --radius-sm: 0.25rem;
       --radius: 0.5rem;
       --radius-lg: 0.75rem;
       --radius-xl: 1rem;
-      
+
       --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
       --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
       --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
       --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     }
-    
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     body {
       background-color: var(--concrete-50);
       color: var(--concrete-800);
@@ -57,43 +71,48 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-    
-    h1, h2, h3, h4, h5, h6 {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: var(--font-heading);
       font-weight: 700;
       line-height: 1.3;
       margin-bottom: var(--space-sm);
     }
-    
+
     p {
       margin-bottom: var(--space-sm);
     }
-    
+
     a {
       color: inherit;
       text-decoration: none;
     }
-    
+
     img {
       max-width: 100%;
       height: auto;
       display: block;
     }
-    
+
     .container {
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 var(--space-md);
     }
-    
+
     .text-center {
       text-align: center;
     }
-    
+
     /* Header Styles - Enhanced */
     header {
-      background-color: rgba(24, 24, 27, 0.95);
+      background-color: var(--primary-blue);
       color: white;
       position: sticky;
       top: 0;
@@ -102,59 +121,38 @@
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
     }
-    
+
     .header-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: var(--space-md) var(--space-sm);
     }
-    
+
     .logo {
       display: flex;
       align-items: center;
     }
-    
-    .logo-icon {
-      width: 2.5rem;
-      height: 2.5rem;
-      background: linear-gradient(135deg, var(--accent-light), var(--accent-dark));
-      border-radius: 50%;
-      margin-right: var(--space-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: pulse 2s infinite;
-      box-shadow: 0 4px 6px rgba(245, 158, 11, 0.3);
+
+    .logo img {
+      height: 50px;
     }
-    
-    .logo-icon i {
-      color: white;
-    }
-    
-    .logo-text {
-      font-size: 1.5rem;
-      font-weight: 700;
-      background: linear-gradient(to right, white, var(--accent-light));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    
+
     nav {
       display: none;
       gap: var(--space-lg);
     }
-    
+
     .nav-link {
       position: relative;
       transition: color 0.3s ease;
       font-weight: 500;
     }
-    
+
     .nav-link:hover {
-      color: var(--accent-light);
+      color: var(--accent-orange);
     }
-    
+
     .nav-link::after {
       content: '';
       position: absolute;
@@ -162,14 +160,14 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: linear-gradient(to right, var(--accent-light), var(--accent-dark));
+      background: linear-gradient(to right, var(--accent-orange), var(--accent-dark-orange));
       transition: width 0.3s ease;
     }
-    
+
     .nav-link:hover::after {
       width: 100%;
     }
-    
+
     .mobile-menu-btn {
       color: var(--concrete-100);
       background: none;
@@ -185,12 +183,12 @@
       justify-content: center;
       background: rgba(255, 255, 255, 0.1);
     }
-    
+
     .mobile-menu-btn:hover {
       transform: scale(1.1);
       background: rgba(255, 255, 255, 0.2);
     }
-    
+
     /* Mobile Menu */
     .mobile-menu {
       position: fixed;
@@ -199,27 +197,27 @@
       width: 80%;
       max-width: 300px;
       height: 100vh;
-      background-color: var(--concrete-900);
+      background-color: var(--primary-dark-blue);
       z-index: 100;
       padding: var(--space-2xl) var(--space-lg);
       transition: right 0.3s ease;
       box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
     }
-    
+
     .mobile-menu.active {
       right: 0;
     }
-    
+
     .mobile-menu nav {
       display: flex;
       flex-direction: column;
       gap: var(--space-lg);
     }
-    
+
     .mobile-menu .nav-link {
       font-size: 1.2rem;
     }
-    
+
     .close-menu {
       position: absolute;
       top: var(--space-md);
@@ -237,12 +235,12 @@
       align-items: center;
       justify-content: center;
     }
-    
+
     .close-menu:hover {
       transform: rotate(90deg);
       background: rgba(255, 255, 255, 0.2);
     }
-    
+
     .overlay {
       position: fixed;
       top: 0;
@@ -257,25 +255,25 @@
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
     }
-    
+
     .overlay.active {
       opacity: 1;
       visibility: visible;
     }
-    
+
     /* Enhanced Hero Carousel Styles */
     .hero-carousel {
       position: relative;
       height: 100vh;
       overflow: hidden;
     }
-    
+
     .carousel-inner {
       position: relative;
       width: 100%;
       height: 100%;
     }
-    
+
     .carousel-slide {
       position: absolute;
       top: 0;
@@ -287,11 +285,11 @@
       background-size: cover;
       background-position: center;
     }
-    
+
     .carousel-slide.active {
       opacity: 1;
     }
-    
+
     .slide-content {
       position: absolute;
       top: 0;
@@ -308,38 +306,38 @@
       z-index: 2;
       background: rgba(0, 0, 0, 0.4);
     }
-    
+
     .hero-text-wrapper {
       max-width: 800px;
       margin: 0 auto;
     }
-    
+
     .hero-title {
       font-size: 2.5rem;
       margin-bottom: var(--space-lg);
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
       color: white;
       font-weight: 800;
       letter-spacing: 1px;
       animation: fadeInUp 1s ease-out 0.5s both;
     }
-    
+
     .hero-subtitle {
       font-size: 1.25rem;
       margin-bottom: var(--space-xl);
       max-width: 600px;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
       animation: fadeInUp 1s ease-out 0.8s both;
       font-weight: 400;
     }
-    
+
     .hero-buttons {
       display: flex;
       flex-direction: column;
       gap: var(--space-sm);
       animation: fadeInUp 1s ease-out 1.1s both;
     }
-    
+
     .carousel-controls {
       position: absolute;
       bottom: var(--space-lg);
@@ -349,7 +347,7 @@
       gap: var(--space-sm);
       z-index: 10;
     }
-    
+
     .carousel-dot {
       width: 14px;
       height: 14px;
@@ -358,13 +356,13 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
-    
+
     .carousel-dot.active {
-      background: linear-gradient(135deg, var(--accent-light), var(--accent-dark));
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-dark-orange));
       transform: scale(1.2);
-      box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+      box-shadow: 0 0 10px rgba(237, 137, 54, 0.5);
     }
-    
+
     .carousel-arrow {
       position: absolute;
       top: 50%;
@@ -383,20 +381,20 @@
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
     }
-    
+
     .carousel-arrow:hover {
-      background: linear-gradient(135deg, var(--accent-light), var(--accent-dark));
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-dark-orange));
       transform: translateY(-50%) scale(1.1);
     }
-    
+
     .carousel-arrow.prev {
       left: var(--space-md);
     }
-    
+
     .carousel-arrow.next {
       right: var(--space-md);
     }
-    
+
     /* Button Styles - Enhanced */
     .btn {
       display: inline-block;
@@ -412,32 +410,32 @@
       font-family: var(--font-heading);
       letter-spacing: 0.5px;
     }
-    
+
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent-light), var(--accent-dark));
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-dark-orange));
       color: white;
-      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+      box-shadow: 0 4px 15px rgba(237, 137, 54, 0.3);
     }
-    
+
     .btn-primary:hover {
-      background: linear-gradient(135deg, var(--accent-dark), var(--accent-light));
+      background: linear-gradient(135deg, var(--accent-dark-orange), var(--accent-orange));
       transform: translateY(-3px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
-    
+
     .btn-outline {
       border: 2px solid white;
       color: white;
       background: transparent;
     }
-    
+
     .btn-outline:hover {
       background-color: white;
-      color: var(--concrete-900);
+      color: var(--primary-blue);
       transform: translateY(-3px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
-    
+
     .btn::before {
       content: '';
       position: absolute;
@@ -445,48 +443,48 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
       transition: all 0.6s ease;
     }
-    
+
     .btn:hover::before {
       left: 100%;
     }
-    
+
     /* Section Styles - Enhanced */
     section {
       padding: var(--space-2xl) 0;
       position: relative;
     }
-    
+
     .section-title {
       text-align: center;
       margin-bottom: var(--space-2xl);
     }
-    
+
     .section-title h3 {
       font-size: 2rem;
       margin-bottom: var(--space-sm);
       position: relative;
       display: inline-block;
     }
-    
+
     .title-underline {
       width: 5rem;
       height: 4px;
-      background: linear-gradient(90deg, var(--accent-light), var(--accent-dark));
+      background: linear-gradient(90deg, var(--accent-orange), var(--accent-dark-orange));
       margin: 0 auto var(--space-lg);
       border-radius: 3px;
       animation: gradientShift 3s ease infinite;
     }
-    
+
     /* Product Cards with Enhanced Design */
     .products-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: var(--space-xl);
     }
-    
+
     .product-card {
       background-color: white;
       border-radius: var(--radius-xl);
@@ -495,18 +493,18 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
     }
-    
+
     .product-card:hover {
       transform: translateY(-10px);
       box-shadow: var(--shadow-lg);
     }
-    
+
     .product-gallery {
       height: 16rem;
       overflow: hidden;
       position: relative;
     }
-    
+
     .product-gallery img {
       width: 100%;
       height: 100%;
@@ -518,11 +516,11 @@
       opacity: 0;
       transition: opacity 0.5s ease;
     }
-    
+
     .product-gallery img.active {
       opacity: 1;
     }
-    
+
     .gallery-controls {
       position: absolute;
       bottom: 15px;
@@ -532,7 +530,7 @@
       gap: 8px;
       z-index: 5;
     }
-    
+
     .gallery-dot {
       width: 12px;
       height: 12px;
@@ -542,46 +540,46 @@
       transition: all 0.3s ease;
       border: 1px solid rgba(0, 0, 0, 0.2);
     }
-    
+
     .gallery-dot.active {
-      background: linear-gradient(135deg, var(--accent-light), var(--accent-dark));
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-dark-orange));
       transform: scale(1.2);
     }
-    
+
     .product-content {
       padding: var(--space-lg);
     }
-    
+
     .product-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       margin-bottom: var(--space-sm);
     }
-    
+
     .product-badge {
-      background: linear-gradient(135deg, var(--accent-light), var(--accent-dark));
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-dark-orange));
       color: white;
       font-size: 0.75rem;
       font-weight: 700;
       padding: 0.35rem 0.85rem;
       border-radius: 9999px;
-      box-shadow: 0 4px 6px rgba(245, 158, 11, 0.2);
+      box-shadow: 0 4px 6px rgba(237, 137, 54, 0.2);
     }
-    
+
     .product-price {
       font-weight: 700;
-      color: var(--accent-dark);
+      color: var(--accent-dark-orange);
       font-size: 1.25rem;
     }
-    
+
     .product-footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-top: var(--space-md);
     }
-    
+
     .product-btn {
       background: linear-gradient(135deg, var(--concrete-700), var(--concrete-800));
       color: white;
@@ -593,20 +591,20 @@
       transition: all 0.3s ease;
       font-weight: 500;
     }
-    
+
     .product-btn:hover {
-      background: linear-gradient(135deg, var(--accent-light), var(--accent-dark));
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-dark-orange));
       transform: translateY(-2px);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    
+
     /* Features Section - Enhanced */
     .features {
       background-color: var(--concrete-100);
       position: relative;
       overflow: hidden;
     }
-    
+
     .features::before {
       content: '';
       position: absolute;
@@ -614,11 +612,11 @@
       right: -100px;
       width: 300px;
       height: 300px;
-      background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.05));
+      background: linear-gradient(135deg, rgba(237, 137, 54, 0.1), rgba(221, 107, 32, 0.05));
       border-radius: 50%;
       z-index: 0;
     }
-    
+
     .features::after {
       content: '';
       position: absolute;
@@ -626,11 +624,11 @@
       left: -100px;
       width: 250px;
       height: 250px;
-      background: linear-gradient(135deg, rgba(217, 119, 6, 0.05), rgba(245, 158, 11, 0.1));
+      background: linear-gradient(135deg, rgba(221, 107, 32, 0.05), rgba(237, 137, 54, 0.1));
       border-radius: 50%;
       z-index: 0;
     }
-    
+
     .features-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -638,7 +636,7 @@
       position: relative;
       z-index: 1;
     }
-    
+
     .feature-item {
       text-align: center;
       background: white;
@@ -647,62 +645,385 @@
       box-shadow: var(--shadow-sm);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    
+
     .feature-item:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow-md);
     }
-    
+
     .feature-icon {
       width: 5rem;
       height: 5rem;
-      background: linear-gradient(135deg, var(--accent-light), var(--accent-dark));
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-dark-orange));
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto var(--space-md);
       transition: transform 0.3s ease;
-      box-shadow: 0 10px 15px rgba(245, 158, 11, 0.2);
+      box-shadow: 0 10px 15px rgba(237, 137, 54, 0.2);
     }
-    
+
     .feature-item:hover .feature-icon {
       transform: scale(1.1) rotate(5deg);
     }
-    
+
     .feature-icon i {
       font-size: 2rem;
       color: white;
     }
-    
+
     .feature-item h4 {
       font-size: 1.25rem;
       color: var(--concrete-800);
       margin-bottom: var(--space-sm);
     }
-    
+
     .feature-item p {
       color: var(--concrete-600);
     }
-    
-    /* Visit Our Factory Section - Enhanced */
+
+    /* Video Gallery Section */
+    .video-gallery {
+      background-color: var(--primary-blue);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-gallery::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(135deg, rgba(237, 137, 54, 0.1), rgba(221, 107, 32, 0.05));
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .video-gallery::after {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      left: -50px;
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(135deg, rgba(221, 107, 32, 0.05), rgba(237, 137, 54, 0.1));
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+      position: relative;
+      z-index: 1;
+    }
+
+    .video-card {
+      background-color: var(--primary-dark-blue);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .video-thumbnail {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .video-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .video-card:hover .video-thumbnail img {
+      transform: scale(1.05);
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-dark-orange));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .play-button:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .play-button i {
+      color: white;
+      font-size: 1.5rem;
+      margin-left: 3px;
+    }
+
+    .video-content {
+      padding: var(--space-lg);
+    }
+
+    .video-content h4 {
+      color: white;
+      margin-bottom: var(--space-sm);
+    }
+
+    .video-content p {
+      color: var(--concrete-300);
+      font-size: 0.9rem;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      background-color: var(--concrete-100);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonials::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(135deg, rgba(237, 137, 54, 0.1), rgba(221, 107, 32, 0.05));
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-card {
+      background-color: white;
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+      box-shadow: var(--shadow-md);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .testimonial-quote {
+      font-size: 3rem;
+      color: var(--accent-orange);
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      opacity: 0.3;
+    }
+
+    .testimonial-content {
+      margin-bottom: var(--space-md);
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-content p {
+      font-style: italic;
+      color: var(--concrete-700);
+      margin-bottom: var(--space-md);
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .author-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: var(--concrete-300);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .author-avatar i {
+      font-size: 1.5rem;
+      color: var(--concrete-600);
+    }
+
+    .author-info h5 {
+      margin-bottom: 0;
+      color: var(--concrete-800);
+    }
+
+    .author-info p {
+      margin-bottom: 0;
+      color: var(--concrete-500);
+      font-size: 0.9rem;
+    }
+
+    /* Throbbers/Stats Section */
+    .stats {
+      background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark-blue));
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stats::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(135deg, rgba(237, 137, 54, 0.1), rgba(221, 107, 32, 0.05));
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+      position: relative;
+      z-index: 1;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: var(--space-lg);
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: var(--space-sm);
+      background: linear-gradient(to right, var(--accent-orange), var(--accent-dark-orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .stat-label {
+      font-size: 1.125rem;
+      color: var(--concrete-300);
+    }
+
+    /* Process Section */
+    .process {
+      background-color: var(--concrete-50);
+      position: relative;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+
+    .process-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .process-number {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-dark-orange));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: var(--space-md);
+      box-shadow: 0 5px 15px rgba(237, 137, 54, 0.3);
+    }
+
+    .process-content h4 {
+      margin-bottom: var(--space-sm);
+      color: var(--concrete-800);
+    }
+
+    .process-content p {
+      color: var(--concrete-600);
+    }
+
+    /* Visit Our Factory Section - FIXED with LARGER MAP */
     .visit-factory {
       background-color: var(--concrete-100);
       position: relative;
     }
-    
+
     .visit-grid {
       display: flex;
       flex-direction: column;
       gap: var(--space-xl);
     }
-    
+
     .visit-cards {
       display: grid;
       grid-template-columns: 1fr;
       gap: var(--space-lg);
+      width: 100%;
     }
-    
+
+    /* Media queries for responsive layout */
+    @media (min-width: 768px) {
+      .visit-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-xl);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .visit-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-2xl);
+      }
+
+      .visit-cards {
+        flex: 1;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-xl);
+        max-width: 800px;
+      }
+    }
+
     .visit-card {
       background-color: white;
       border-radius: var(--radius-xl);
@@ -712,8 +1033,12 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
       overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    
+
     .visit-card::before {
       content: '';
       position: absolute;
@@ -721,95 +1046,98 @@
       left: 0;
       width: 5px;
       height: 100%;
-      background: linear-gradient(to bottom, var(--accent-light), var(--accent-dark));
+      background: linear-gradient(to bottom, var(--accent-orange), var(--accent-dark-orange));
       transition: width 0.3s ease;
     }
-    
+
     .visit-card:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow-lg);
     }
-    
+
     .visit-card:hover::before {
       width: 8px;
     }
-    
+
     .visit-card-icon {
       width: 5rem;
       height: 5rem;
-      background: linear-gradient(135deg, var(--accent-light), var(--accent-dark));
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-dark-orange));
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto var(--space-md);
       transition: transform 0.3s ease;
-      box-shadow: 0 8px 15px rgba(245, 158, 11, 0.2);
+      box-shadow: 0 8px 15px rgba(237, 137, 54, 0.2);
     }
-    
+
     .visit-card:hover .visit-card-icon {
       transform: scale(1.1);
     }
-    
+
     .visit-card-icon i {
       font-size: 2rem;
       color: white;
     }
-    
+
     .visit-card h4 {
       font-size: 1.5rem;
       margin-bottom: var(--space-sm);
       color: var(--concrete-800);
     }
-    
+
     .visit-card p {
       margin-bottom: var(--space-xs);
       color: var(--concrete-600);
     }
-    
+
     .visit-card .highlight {
       font-weight: 600;
-      color: var(--accent-dark);
+      color: var(--accent-dark-orange);
       font-size: 1.2rem;
     }
-    
+
     .business-hours {
       margin-top: var(--space-md);
       padding-top: var(--space-md);
       border-top: 1px solid var(--concrete-200);
     }
-    
+
     .business-hours p {
       font-size: 0.9rem;
     }
-    
+
+    /* LARGER MAP CONTAINER */
     .map-container {
       border-radius: var(--radius-xl);
       overflow: hidden;
       box-shadow: var(--shadow-md);
-      height: 300px;
+      height: 450px;
+      /* Increased from 300px to 450px */
       transition: transform 0.3s ease;
       border: 8px solid white;
+      width: 100%;
     }
-    
+
     .map-container:hover {
       transform: scale(1.02);
     }
-    
+
     .map-container iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
-    
+
     /* Footer - Enhanced */
     footer {
-      background: linear-gradient(to bottom, var(--concrete-900), var(--concrete-800));
+      background: linear-gradient(to bottom, var(--primary-blue), var(--primary-dark-blue));
       color: white;
       padding: var(--space-2xl) 0 var(--space-lg);
       position: relative;
     }
-    
+
     footer::before {
       content: '';
       position: absolute;
@@ -817,31 +1145,35 @@
       left: 0;
       width: 100%;
       height: 5px;
-      background: linear-gradient(to right, var(--accent-light), var(--accent-dark));
+      background: linear-gradient(to right, var(--accent-orange), var(--accent-dark-orange));
     }
-    
+
     .footer-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: var(--space-xl);
     }
-    
+
     .footer-logo {
       display: flex;
       align-items: center;
       margin-bottom: var(--space-md);
     }
-    
+
+    .footer-logo img {
+      height: 50px;
+    }
+
     .footer-description {
       color: var(--concrete-300);
       margin-bottom: var(--space-md);
     }
-    
+
     .social-links {
       display: flex;
       gap: var(--space-sm);
     }
-    
+
     .social-links a {
       color: var(--concrete-300);
       transition: all 0.3s ease;
@@ -853,13 +1185,13 @@
       justify-content: center;
       background: rgba(255, 255, 255, 0.1);
     }
-    
+
     .social-links a:hover {
-      color: var(--accent-light);
+      color: var(--accent-orange);
       transform: translateY(-3px);
-      background: linear-gradient(135deg, var(--accent-light), var(--accent-dark));
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-dark-orange));
     }
-    
+
     .footer-heading {
       font-size: 1.125rem;
       font-weight: 600;
@@ -867,7 +1199,7 @@
       position: relative;
       display: inline-block;
     }
-    
+
     .footer-heading::after {
       content: '';
       position: absolute;
@@ -875,22 +1207,22 @@
       left: 0;
       width: 30px;
       height: 2px;
-      background: linear-gradient(to right, var(--accent-light), var(--accent-dark));
+      background: linear-gradient(to right, var(--accent-orange), var(--accent-dark-orange));
     }
-    
+
     .footer-links {
       list-style: none;
     }
-    
+
     .footer-links li {
       margin-bottom: var(--space-sm);
       transition: transform 0.3s ease;
     }
-    
+
     .footer-links li:hover {
       transform: translateX(5px);
     }
-    
+
     .footer-links a {
       color: var(--concrete-300);
       transition: color 0.3s ease;
@@ -898,22 +1230,22 @@
       align-items: center;
       gap: 8px;
     }
-    
+
     .footer-links a::before {
       content: '➤';
-      color: var(--accent-light);
+      color: var(--accent-orange);
       font-size: 0.8rem;
       transition: transform 0.3s ease;
     }
-    
+
     .footer-links a:hover {
-      color: var(--accent-light);
+      color: var(--accent-orange);
     }
-    
+
     .footer-links a:hover::before {
       transform: translateX(3px);
     }
-    
+
     .footer-bottom {
       border-top: 1px solid var(--concrete-800);
       margin-top: var(--space-2xl);
@@ -921,164 +1253,319 @@
       text-align: center;
       color: var(--concrete-400);
     }
-    
+
     /* Animations */
     @keyframes fadeInUp {
       from {
         opacity: 0;
         transform: translateY(30px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-    
+
     @keyframes fadeIn {
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
     }
-    
+
     @keyframes pulse {
       0% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4);
+        box-shadow: 0 0 0 0 rgba(237, 137, 54, 0.4);
       }
+
       70% {
         transform: scale(1.05);
-        box-shadow: 0 0 0 10px rgba(245, 158, 11, 0);
+        box-shadow: 0 0 0 10px rgba(237, 137, 54, 0);
       }
+
       100% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+        box-shadow: 0 0 0 0 rgba(237, 137, 54, 0);
       }
     }
-    
+
     @keyframes float {
       0% {
         transform: translateY(0px);
       }
+
       50% {
         transform: translateY(-10px);
       }
+
       100% {
         transform: translateY(0px);
       }
     }
-    
+
     @keyframes gradientShift {
       0% {
         background-position: 0% 50%;
       }
+
       50% {
         background-position: 100% 50%;
       }
+
       100% {
         background-position: 0% 50%;
       }
     }
-    
+
     /* Media Queries */
     @media (min-width: 640px) {
       .hero-title {
         font-size: 3rem;
       }
-      
+
       .hero-buttons {
         flex-direction: row;
         justify-content: center;
       }
-      
+
       .products-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-      
+
       .features-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-      
-      .visit-cards {
+
+      .video-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-      
+
+      .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       .footer-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-    
+
     @media (min-width: 768px) {
       .header-container {
         padding: var(--space-md);
       }
-      
+
       nav {
         display: flex;
       }
-      
+
       .mobile-menu-btn {
         display: none;
       }
-      
+
       .section-title h3 {
         font-size: 2.5rem;
       }
-      
+
       .footer-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-    
+
     @media (min-width: 1024px) {
       .products-grid {
         grid-template-columns: repeat(3, 1fr);
       }
-      
+
       .features-grid {
         grid-template-columns: repeat(3, 1fr);
       }
-      
-      /* Updated for Visit Our Factory section */
-      .visit-cards {
+
+      .video-grid {
         grid-template-columns: repeat(3, 1fr);
       }
-      
-      .map-container {
-        height: 400px; /* Larger map on desktop */
+
+      .testimonial-grid {
+        grid-template-columns: repeat(3, 1fr);
       }
-      
+
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
       .footer-grid {
         grid-template-columns: repeat(3, 1fr);
       }
+
+      /* Larger map on desktop */
+      .map-container {
+        height: 500px;
+        /* Even larger on desktop */
+      }
     }
-    
+
     @media (min-width: 1280px) {
       .hero-title {
         font-size: 3.5rem;
       }
-      
+
       .footer-grid {
         grid-template-columns: 2fr 1fr 1fr;
       }
     }
+
+    /* SCROLL ANIMATIONS - ADDED */
+
+    /* Products Section - Staggered fade in */
+    .product-card {
+      opacity: 0;
+      transform: translateY(50px) rotateX(10deg);
+      transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card.animate {
+      opacity: 1;
+      transform: translateY(0) rotateX(0);
+    }
+
+    /* Features Section - Rotating icons with glow */
+    .feature-item {
+      opacity: 0;
+      transform: translateX(-50px) rotateY(15deg);
+      transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-item.animate {
+      opacity: 1;
+      transform: translateX(0) rotateY(0);
+    }
+
+    .feature-icon {
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .feature-item.animate .feature-icon {
+      animation: iconGlow 2s ease infinite;
+    }
+
+    @keyframes iconGlow {
+
+      0%,
+      100% {
+        box-shadow: 0 10px 15px rgba(237, 137, 54, 0.2);
+      }
+
+      50% {
+        box-shadow: 0 10px 25px rgba(237, 137, 54, 0.4);
+      }
+    }
+
+    /* Video Gallery - Slide in from sides */
+    .video-card {
+      opacity: 0;
+      transform: translateX(100px);
+      transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 0.3s ease;
+    }
+
+    .video-card:nth-child(even) {
+      transform: translateX(-100px);
+    }
+
+    .video-card.animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Testimonials - Flip animation */
+    .testimonial-card {
+      opacity: 0;
+      transform: perspective(1000px) rotateY(90deg);
+      transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial-card.animate {
+      opacity: 1;
+      transform: perspective(1000px) rotateY(0);
+    }
+
+    /* Stats - Counter animation */
+    .stat-number {
+      opacity: 0;
+      transform: scale(0.5);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .stat-item.animate .stat-number {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Process - Sequential reveal */
+    .process-item {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .process-item.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Visit Factory - Bounce in */
+    .visit-card {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 0.3s ease;
+    }
+
+    .visit-card.animate {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .map-container {
+      opacity: 0;
+      transform: scale(0.9) rotate(5deg);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .map-container.animate {
+      opacity: 1;
+      transform: scale(1) rotate(0);
+    }
   </style>
 </head>
+
 <body>
   <!-- Header -->
   <header>
     <div class="container header-container">
       <div class="logo">
-        <div class="logo-icon">
-          <i class="fas fa-cubes"></i>
-        </div>
-        <h1 class="logo-text">Concrete<span class="logo-accent">Pro</span></h1>
+        <img src="homabay_insights.jpg" alt="Homa Bay Market Insights Logo">
       </div>
+
       <nav class="desktop-nav">
         <a href="#home" class="nav-link">Home</a>
         <a href="#products" class="nav-link">Products</a>
+        <a href="#videos" class="nav-link">Videos</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
         <a href="#visit" class="nav-link">Visit Our Factory</a>
       </nav>
       <button class="mobile-menu-btn" id="menuBtn">
@@ -1095,6 +1582,8 @@
     <nav>
       <a href="#home" class="nav-link">Home</a>
       <a href="#products" class="nav-link">Products</a>
+      <a href="#videos" class="nav-link">Videos</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
       <a href="#visit" class="nav-link">Visit Our Factory</a>
     </nav>
   </div>
@@ -1116,7 +1605,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Slide 2 -->
       <div class="carousel-slide" style="background-image: url('quality%20construction%20material.jpg');">
         <div class="slide-content">
@@ -1130,7 +1619,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Slide 3 -->
       <div class="carousel-slide" style="background-image: url('custom%20solutions.jpg');">
         <div class="slide-content">
@@ -1145,14 +1634,14 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Carousel Controls -->
     <div class="carousel-controls">
       <div class="carousel-dot active" data-slide="0"></div>
       <div class="carousel-dot" data-slide="1"></div>
       <div class="carousel-dot" data-slide="2"></div>
     </div>
-    
+
     <!-- Navigation Arrows -->
     <div class="carousel-arrow prev" id="prevSlide">
       <i class="fas fa-chevron-left"></i>
@@ -1168,7 +1657,8 @@
       <div class="section-title">
         <h3>Our Premium Products</h3>
         <div class="title-underline"></div>
-        <p>Discover our range of high-quality concrete products designed for both residential and commercial applications</p>
+        <p>Discover our range of high-quality concrete products designed for both residential and commercial
+          applications</p>
       </div>
       <div class="products-grid">
         <!-- Product Card 1 -->
@@ -1188,10 +1678,10 @@
               <h4>Paving Blocks</h4>
               <span class="product-badge">Best Seller</span>
             </div>
-            <p>Durable interlocking blocks for driveways, walkways, and patios. Available in various colors and patterns.</p>
+            <p>Durable interlocking blocks for driveways, walkways, and patios. Available in various colors and
+              patterns.</p>
             <div class="product-footer">
               <span class="product-price">From ksh 350 per piece</span>
-              <button class="product-btn">Details</button>
             </div>
           </div>
         </div>
@@ -1210,10 +1700,10 @@
           </div>
           <div class="product-content">
             <h4>Concrete Slabs</h4>
-            <p>Strong, uniform slabs for construction and flooring applications. Perfect for foundations and structural elements.</p>
+            <p>Strong, uniform slabs for construction and flooring applications. Perfect for foundations and structural
+              elements.</p>
             <div class="product-footer">
               <span class="product-price">From ksh 1,250 per slab</span>
-              <button class="product-btn">Details</button>
             </div>
           </div>
         </div>
@@ -1232,10 +1722,10 @@
           </div>
           <div class="product-content">
             <h4>Fencing Posts</h4>
-            <p>Reliable, weather-resistant posts for farms, gardens, and compounds. Precast for immediate installation.</p>
+            <p>Reliable, weather-resistant posts for farms, gardens, and compounds. Precast for immediate installation.
+            </p>
             <div class="product-footer">
               <span class="product-price">From Ksh 1,500 per post</span>
-              <button class="product-btn">Details</button>
             </div>
           </div>
         </div>
@@ -1276,7 +1766,138 @@
     </div>
   </section>
 
-  <!-- Visit Our Factory Section -->
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h3>What Our Clients Say</h3>
+        <div class="title-underline"></div>
+        <p>Hear from satisfied customers who have used our premium concrete products</p>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-content">
+            <p>"The paving blocks we purchased transformed our driveway completely. The quality is exceptional and the
+              installation was straightforward. Highly recommended!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h5>John Kamau</h5>
+                <p>Homeowner, Homabay</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-content">
+            <p>"As a contractor, I rely on quality materials. These concrete slabs have never failed me. Consistent
+              quality and timely delivery make them my go-to supplier."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h5>Sarah Otieno</h5>
+                <p>Construction Manager</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-content">
+            <p>"The fencing posts have withstood harsh weather conditions on my farm for over three years without any
+              signs of wear. Truly durable products!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h5>Michael Onyango</h5>
+                <p>Farm Owner, Rongo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="container">
+      <div class="section-title">
+        <h3>Our Impact in Numbers</h3>
+        <div class="title-underline"></div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-count="15">0</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="2500">0</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="98">0</div>
+          <div class="stat-label">Satisfied Clients</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="15">0</div>
+          <div class="stat-label">Counties Served</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process">
+    <div class="container">
+      <div class="section-title">
+        <h3>Our Production Process</h3>
+        <div class="title-underline"></div>
+        <p>How we create premium concrete products from raw materials to finished goods</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-item">
+          <div class="process-number">1</div>
+          <div class="process-content">
+            <h4>Material Selection</h4>
+            <p>We source only the highest quality raw materials including premium cement, aggregates, and additives.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-number">2</div>
+          <div class="process-content">
+            <h4>Precise Mixing</h4>
+            <p>Our automated batching system ensures consistent mix proportions for uniform quality in every batch.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-number">3</div>
+          <div class="process-content">
+            <h4>Molding & Compaction</h4>
+            <p>Specialized machinery shapes and compacts the concrete to achieve optimal density and strength.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-number">4</div>
+          <div class="process-content">
+            <h4>Curing & Quality Check</h4>
+            <p>Controlled curing process followed by rigorous quality inspections before products are ready for
+              delivery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit Our Factory Section - FIXED with LARGER MAP -->
   <section id="visit" class="visit-factory">
     <div class="container">
       <div class="section-title">
@@ -1291,40 +1912,31 @@
               <i class="fas fa-phone"></i>
             </div>
             <h4>Phone</h4>
-            <p class="highlight">+254 700 000 000</p>
+            <p class="highlight">+254 725047265</p>
             <div class="business-hours">
               <p>Mon-Fri: 8:00 AM - 5:00 PM</p>
               <p>Sat: 9:00 AM - 1:00 PM</p>
             </div>
           </div>
-          
-          <div class="visit-card">
-            <div class="visit-card-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <h4>Email</h4>
-            <p class="highlight">info@concretepro.com</p>
-            <p>sales@concretepro.com</p>
-            <div class="business-hours">
-              <p>We respond within 24 hours</p>
-            </div>
-          </div>
-          
+
           <div class="visit-card">
             <div class="visit-card-icon">
               <i class="fas fa-map-marker-alt"></i>
             </div>
             <h4>Location</h4>
-            <p class="highlight">Industrial Area</p>
-            <p>Nairobi, Kenya</p>
+            <p class="highlight">Homabay Town</p>
+            <p>Homabay County, Kenya</p>
             <div class="business-hours">
               <p>Factory tours available by appointment</p>
             </div>
           </div>
         </div>
-        
+
         <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63841.842422004345!2d36.78890694999999!3d-1.202689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3f31d6c5fcc7%3A0xada55befaabc9422!2sIndustrial%20Area%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1724342234253!5m2!1sen!2ske" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <!-- Updated Google Maps embed for Homabay Town -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63857.15264921083!2d34.43683457214861!3d-0.5363052628260064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182b0f0d5d0d5d0d%3A0x182b0f0d5d0d5d0d!2sHoma%20Bay%20Municipal%20Market!5e0!3m2!1sen!2ske!4v1724342234253!5m2!1sen!2ske"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
@@ -1336,17 +1948,13 @@
       <div class="footer-grid">
         <div>
           <div class="footer-logo">
-            <div class="logo-icon">
-              <i class="fas fa-cubes"></i>
-            </div>
-            <h2 class="logo-text">Concrete<span class="logo-accent">Pro</span></h2>
+            <img src="homabay_insights.jpg" alt="Homa Bay Market Insights Logo">
           </div>
-          <p class="footer-description">Providing premium concrete solutions for construction and landscaping needs across East Africa.</p>
+
+          <p class="footer-description">Providing premium concrete solutions for construction and landscaping needs
+            across East Africa.</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/share/163mFgBy6H/"><i class="fab fa-facebook-f"></i></a>
           </div>
         </div>
         <div>
@@ -1354,6 +1962,8 @@
           <ul class="footer-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#products">Products</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#visit">Visit Our Factory</a></li>
           </ul>
         </div>
@@ -1368,7 +1978,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 ConcretePro. All rights reserved.</p>
+        <p>Homa Bay Market Insights</p>
       </div>
     </div>
   </footer>
@@ -1379,35 +1989,35 @@
     const mobileMenu = document.getElementById('mobileMenu');
     const closeMenu = document.getElementById('closeMenu');
     const overlay = document.getElementById('overlay');
-    
+
     function openMenu() {
       mobileMenu.classList.add('active');
       overlay.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
-    
+
     function closeMobileMenu() {
       mobileMenu.classList.remove('active');
       overlay.classList.remove('active');
       document.body.style.overflow = 'auto';
     }
-    
+
     menuBtn.addEventListener('click', openMenu);
     closeMenu.addEventListener('click', closeMobileMenu);
     overlay.addEventListener('click', closeMobileMenu);
-    
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
+      anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        
+
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-        
+
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
           closeMobileMenu();
-          
+
           window.scrollTo({
             top: targetElement.offsetTop - 80,
             behavior: 'smooth'
@@ -1415,7 +2025,7 @@
         }
       });
     });
-    
+
     // Hero Carousel Functionality
     const carouselSlides = document.querySelectorAll('.carousel-slide');
     const carouselDots = document.querySelectorAll('.carousel-dot');
@@ -1423,71 +2033,71 @@
     const nextButton = document.getElementById('nextSlide');
     let currentSlide = 0;
     let carouselInterval;
-    
+
     function showSlide(index) {
       carouselSlides.forEach(slide => slide.classList.remove('active'));
       carouselDots.forEach(dot => dot.classList.remove('active'));
-      
+
       carouselSlides[index].classList.add('active');
       carouselDots[index].classList.add('active');
-      
+
       currentSlide = index;
     }
-    
+
     function nextSlide() {
       let nextIndex = (currentSlide + 1) % carouselSlides.length;
       showSlide(nextIndex);
     }
-    
+
     function prevSlide() {
       let prevIndex = (currentSlide - 1 + carouselSlides.length) % carouselSlides.length;
       showSlide(prevIndex);
     }
-    
+
     function startCarousel() {
-      carouselInterval = set(nextSlide, 5000);
+      carouselInterval = setInterval(nextSlide, 5000);
     }
-    
+
     function resetCarousel() {
       clearInterval(carouselInterval);
       startCarousel();
     }
-    
+
     carouselDots.forEach(dot => {
-      dot.addEventListener('click', function() {
+      dot.addEventListener('click', function () {
         let slideIndex = parseInt(this.getAttribute('data-slide'));
         showSlide(slideIndex);
         resetCarousel();
       });
     });
-    
-    prevButton.addEventListener('click', function() {
+
+    prevButton.addEventListener('click', function () {
       prevSlide();
       resetCarousel();
     });
-    
-    nextButton.addEventListener('click', function() {
+
+    nextButton.addEventListener('click', function () {
       nextSlide();
       resetCarousel();
     });
-    
+
     startCarousel();
-    
+
     // Product Gallery Functionality - Fixed
     const productGalleries = document.querySelectorAll('.product-gallery');
-    
+
     productGalleries.forEach(gallery => {
       const dots = gallery.querySelectorAll('.gallery-dot');
       const images = gallery.querySelectorAll('img');
-      
+
       dots.forEach(dot => {
-        dot.addEventListener('click', function() {
+        dot.addEventListener('click', function () {
           const targetIndex = this.getAttribute('data-target');
-          
+
           // Update active dot
           dots.forEach(d => d.classList.remove('active'));
           this.classList.add('active');
-          
+
           // Update active image
           images.forEach(img => {
             img.classList.remove('active');
@@ -1498,45 +2108,222 @@
         });
       });
     });
-    
-    // Animation on scroll functionality
-    function animateOnScroll() {
-      const productCards = document.querySelectorAll('.product-card');
-      const featureItems = document.querySelectorAll('.feature-item');
-      
-      function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-          rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9 &&
-          rect.bottom >= 0
+
+    // React-like Scroll Animation System with Intersection Observer
+    class ScrollAnimator {
+      constructor() {
+        this.observers = new Map();
+        this.animatedElements = new Set();
+        this.init();
+      }
+
+      init() {
+        this.setupObservers();
+      }
+
+      setupObservers() {
+        // Create observers for different thresholds
+        const thresholds = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0];
+
+        this.enterObserver = new IntersectionObserver(
+          (entries) => this.handleEnter(entries),
+          { threshold: thresholds, rootMargin: '-10% 0px -10% 0px' }
+        );
+
+        this.exitObserver = new IntersectionObserver(
+          (entries) => this.handleExit(entries),
+          { threshold: [0], rootMargin: '-10% 0px -10% 0px' }
         );
       }
-      
-      function checkElements() {
-        productCards.forEach(card => {
-          if (isInViewport(card)) {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
+
+      handleEnter(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.animateIn(entry.target);
           }
         });
-        
-        featureItems.forEach(item => {
-          if (isInViewport(item)) {
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
-            }
-          });
-        }
-        
-        // Initial check
-        checkElements();
-        
-        // Check on scroll
-        window.addEventListener('scroll', checkElements);
       }
-      
-      // Initialize animations when page loads
-      window.addEventListener('load', animateOnScroll);
-    </script>
+
+      handleExit(entries) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            this.animateOut(entry.target);
+          }
+        });
+      }
+
+      animateIn(element) {
+        if (this.animatedElements.has(element)) return;
+
+        this.animatedElements.add(element);
+
+        // Remove any existing animate class first
+        element.classList.remove('animate');
+
+        // Force reflow
+        void element.offsetWidth;
+
+        // Add animate class with staggered delay based on element type
+        const delay = this.getStaggerDelay(element);
+        setTimeout(() => {
+          element.classList.add('animate');
+        }, delay);
+      }
+
+      animateOut(element) {
+        this.animatedElements.delete(element);
+        element.classList.remove('animate');
+      }
+
+      getStaggerDelay(element) {
+        const parent = element.closest('section');
+        if (!parent) return 0;
+
+        const elementsInSection = parent.querySelectorAll('[class*="animate"]');
+        const index = Array.from(elementsInSection).indexOf(element);
+
+        // Different stagger delays based on element type
+        if (element.classList.contains('product-card')) return index * 150;
+        if (element.classList.contains('feature-item')) return index * 100;
+        if (element.classList.contains('video-card')) return index * 120;
+        if (element.classList.contains('testimonial-card')) return index * 180;
+        if (element.classList.contains('process-item')) return index * 130;
+        if (element.classList.contains('visit-card')) return index * 110;
+
+        return index * 100;
+      }
+
+      observe(element) {
+        this.enterObserver.observe(element);
+        this.exitObserver.observe(element);
+      }
+
+      unobserve(element) {
+        this.enterObserver.unobserve(element);
+        this.exitObserver.unobserve(element);
+        this.animatedElements.delete(element);
+      }
+    }
+
+    // Initialize scroll animator
+    const scrollAnimator = new ScrollAnimator();
+
+    // Set up animations for all animatable elements
+    function setupScrollAnimations() {
+      const animatableSelectors = [
+        '.product-card',
+        '.feature-item',
+        '.video-card',
+        '.testimonial-card',
+        '.process-item',
+        '.visit-card',
+        '.map-container',
+        '.stat-item'
+      ];
+
+      animatableSelectors.forEach(selector => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(element => {
+          scrollAnimator.observe(element);
+        });
+      });
+
+      // Special handling for stats counter
+      const statItems = document.querySelectorAll('.stat-item');
+      statItems.forEach(item => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const statNumber = entry.target.querySelector('.stat-number');
+                if (statNumber && !statNumber.hasAttribute('data-animated')) {
+                  statNumber.setAttribute('data-animated', 'true');
+                  animateCounter(statNumber);
+                }
+              }
+            });
+          },
+          { threshold: 0.5, rootMargin: '-10% 0px -10% 0px' }
+        );
+        observer.observe(item);
+      });
+    }
+
+    // Counter animation function
+    function animateCounter(element) {
+      const target = parseInt(element.getAttribute('data-count'));
+      const duration = 2000;
+      const step = target / (duration / 16);
+      let current = 0;
+
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+          element.textContent = target;
+          clearInterval(timer);
+        } else {
+          element.textContent = Math.floor(current);
+        }
+      }, 16);
+    }
+
+    // Initialize animations when page loads
+    window.addEventListener('load', () => {
+      setupScrollAnimations();
+    });
+
+    // Auto-slide Product Galleries
+    productGalleries.forEach(gallery => {
+      const dots = gallery.querySelectorAll('.gallery-dot');
+      const images = gallery.querySelectorAll('img');
+      let currentIndex = 0;
+      let galleryInterval;
+
+      function showImage(index) {
+        // update dots
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index].classList.add('active');
+
+        // update images
+        images.forEach(img => img.classList.remove('active'));
+        images[index].classList.add('active');
+
+        currentIndex = index;
+      }
+
+      function nextImage() {
+        let nextIndex = (currentIndex + 1) % images.length;
+        showImage(nextIndex);
+      }
+
+      function startGallery() {
+        galleryInterval = setInterval(nextImage, 4000); // change image every 4s
+      }
+
+      function resetGallery() {
+        clearInterval(galleryInterval);
+        startGallery();
+      }
+
+      // Dot click listener (resets interval)
+      dots.forEach(dot => {
+        dot.addEventListener('click', function () {
+          let targetIndex = parseInt(this.getAttribute('data-target'));
+          showImage(targetIndex);
+          resetGallery();
+        });
+      });
+
+      // Start auto-slide
+      startGallery();
+    });
+
+    // Handle page resize and orientation changes
+    window.addEventListener('resize', () => {
+      // Re-initialize animations to account for layout changes
+      setTimeout(setupScrollAnimations, 100);
+    });
+  </script>
 </body>
+
 </html>
